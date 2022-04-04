@@ -14,6 +14,7 @@ header{
     display: flex;
     align-items: center;
     box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.33);
+    z-index: 1;
 }
 
 main{
@@ -61,23 +62,25 @@ img{
     color: #333333;
 }
 
-.itens-rolagem{
+.itens-rolagem-pratos, .itens-rolagem-bebidas, .itens-rolagem-sobremesas{
     display: inline-flex;
-    /*overflow-x: scroll; */
+    overflow-x: scroll;
+    overflow: hidden;
 
 }
 
 .item-selecionado{
     width: 172px;
     height: 216px;
-    border-radius: 4px;
+    border-radius: 9px;
     background-color: #ffffff;
     margin-right: 16px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    position: relative;
 }
 
 .item-caixa-interior{
-    margin: 18px 14px 14px 14px;
+    margin: 18px 14px 14px 11px;
     height: 185px;
     display: flex;
     flex-direction: column;
@@ -94,38 +97,67 @@ img{
     width: 147px;
     font-weight: 300;
     font-size: 15px;
-    line-height: 18px;
     color: #a6a6a6;
     hyphens: auto;
 }
 
 .valor{
     font-size: 16px;
-    font-weight: 400px;
+    font-weight: 400;
 }
 
-.menu-inferior{
-    width: 100%;
-    height: 92px;
+.escolhido{
+    border: thick solid #32B72F;
+}
+
+.escolhido ion-icon{
+    display: flex;
+    position: absolute;
+    color: #32B72F;
+    font-size: 19px;
+    bottom: 14px;
+    right: 14px;
+}
+
+.escondido{
+    display: none;
+}
+
+footer {
     background-color: #ffffff;
+    height: 92px;
+    width: 100%;
     position: fixed;
-    bottom: 0px;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.barra-selecionar{
+footer div{
     width: 364px;
     height: 61px;
-    color: #ffffff;
-    background-color: #cbcbcb;
     border-radius: 50px;
+}
+footer p{
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 400;
-    line-height: 23.44px;
+    color: #ffffff;
+}
+
+.barra-selecionar{
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
+}
+
+.menu-inferior{
+    background-color: #cbcbcb;
+}
+
+.finalizar{
+    background-color: #32b72f;
+    font-size: 16px;
+    font-weight: 700;
 }
