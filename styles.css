@@ -65,9 +65,12 @@ img{
 .itens-rolagem-pratos, .itens-rolagem-bebidas, .itens-rolagem-sobremesas{
     display: inline-flex;
     overflow-x: scroll;
-    overflow: hidden;
-
 }
+
+.itens-rolagem-pratos::-webkit-scrollbar, .itens-rolagem-bebidas::-webkit-scrollbar, .itens-rolagem-sobremesas::-webkit-scrollbar{
+    display: none;
+}
+
 
 .item-selecionado{
     width: 172px;
@@ -77,6 +80,7 @@ img{
     margin-right: 16px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
     position: relative;
+    border-width: thick solid #32B72F;
 }
 
 .item-caixa-interior{
