@@ -7,6 +7,8 @@
 
 body {
   background-color: #e5e5e5;
+body {
+  background-color: #e5e5e5;
 }
 
 header {
@@ -25,8 +27,17 @@ main {
   font-family: "Roboto", sans-serif;
   margin-top: 123px;
   margin-bottom: 108px;
+main {
+  font-family: "Roboto", sans-serif;
+  margin-top: 123px;
+  margin-bottom: 108px;
 }
 
+img {
+  width: 144px;
+  height: 87px;
+  border-radius: 4px;
+  object-fit: cover;
 img {
   width: 144px;
   height: 87px;
@@ -42,14 +53,29 @@ img {
   display: flex;
   flex-direction: column;
   justify-items: center;
+.titulos {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  color: #ffffff;
+  margin-left: 21px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
 }
 
 .menu-superior-titulo,
 .titulo-item-selecionado {
   font-family: "Righteous", cursive;
   font-weight: 400;
+.menu-superior-titulo,
+.titulo-item-selecionado {
+  font-family: "Righteous", cursive;
+  font-weight: 400;
 }
 
+.menu-superior-titulo {
+  font-size: 44px;
+  margin-bottom: 5px;
 .menu-superior-titulo {
   font-size: 44px;
   margin-bottom: 5px;
@@ -62,6 +88,10 @@ img {
   flex-direction: column;
   justify-content: space-between;
 }
+
+.titulo-item-selecionado {
+  font-size: 26px;
+  color: #333333;
 
 .titulo-item-selecionado {
   font-size: 26px;
@@ -86,8 +116,23 @@ img {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
   position: relative;
   border-width: thick solid #32b72f;
+.item-selecionado {
+  width: 172px;
+  height: 216px;
+  border-radius: 9px;
+  background-color: #ffffff;
+  margin-right: 16px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  position: relative;
+  border-width: thick solid #32b72f;
 }
 
+.item-caixa-interior {
+  margin: 18px 14px 14px 11px;
+  height: 185px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 .item-caixa-interior {
   margin: 18px 14px 14px 11px;
   height: 185px;
@@ -100,8 +145,18 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
+.nome-item {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
 }
 
+.descricao-item {
+  width: 147px;
+  font-weight: 300;
+  font-size: 15px;
+  color: #a6a6a6;
+  hyphens: auto;
 .descricao-item {
   width: 147px;
   font-weight: 300;
@@ -113,8 +168,13 @@ img {
 .valor {
   font-size: 16px;
   font-weight: 400;
+.valor {
+  font-size: 16px;
+  font-weight: 400;
 }
 
+.escolhido {
+  border: thick solid #32b72f;
 .escolhido {
   border: thick solid #32b72f;
 }
@@ -126,8 +186,17 @@ img {
   font-size: 19px;
   bottom: 14px;
   right: 14px;
+.escolhido ion-icon {
+  display: flex;
+  position: absolute;
+  color: #32b72f;
+  font-size: 19px;
+  bottom: 14px;
+  right: 14px;
 }
 
+.escondido {
+  display: none;
 .escondido {
   display: none;
 }
@@ -141,7 +210,20 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #ffffff;
+  height: 92px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+footer div {
+  width: 364px;
+  height: 61px;
+  border-radius: 50px;
 
 footer div {
   width: 364px;
@@ -160,8 +242,15 @@ footer p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+.barra-selecionar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+.menu-inferior {
+  background-color: #cbcbcb;
 .menu-inferior {
   background-color: #cbcbcb;
 }
@@ -170,4 +259,9 @@ footer p {
   background-color: #32b72f;
   font-size: 16px;
   font-weight: 700;
+.finalizar {
+  background-color: #32b72f;
+  font-size: 16px;
+  font-weight: 700;
 }
+
