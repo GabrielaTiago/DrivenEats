@@ -57,11 +57,9 @@ function fechandoPedido() {
   let bebidaSelecionada = document.querySelector(".bebidas .escolhido");
   let sobremesaSelecionada = document.querySelector(".sobremesas .escolhido");
 
-  let nomePratoSelecionado =
-    pratoSelecionado.querySelector(".nome-item").innerHTML;
-  let nomeBebidaSelecionada =
-    bebidaSelecionada.querySelector(".nome-item").innerHTML;
-  let nomeSobremesaSelecionada =
+  const nomePrato = pratoSelecionado.querySelector(".nome-item").innerHTML;
+  const nomeBebida = bebidaSelecionada.querySelector(".nome-item").innerHTML;
+  const nomeSobremesa =
     sobremesaSelecionada.querySelector(".nome-item").innerHTML;
 
   const precoPrato = formatarPreco(pratoSelecionado);
@@ -71,12 +69,13 @@ function fechandoPedido() {
   const conversao = (precoPrato + precoBebida + precoSobremesa) / 100;
   const precoTotal = conversao.toFixed(2);
 
+  const mensagemDoPedido = `Olá, gostaria de fazer o pedido:
+  - Prato: ${nomePrato}
+  - Bebida: ${nomeBebida}
+  - Sobremesa: ${nomeSobremesa}
+  Total: R$ ${precoTotal}`;
+
   window.open(
-    "https://wa.me/5562991769161?text=" +
-      encodeURIComponent(`Olá, gostaria de fazer o pedido:
-        - Prato: ${nomePratoSelecionado}
-        - Bebida: ${nomeBebidaSelecionada}
-        - Sobremesa: ${nomeSobremesaSelecionada}
-        Total: R$ ${precoTotal}`)
+    "https://wa.me/5562991769161?text=" + encodeURIComponent(mensagemDoPedido)
   );
 }
