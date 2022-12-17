@@ -41,6 +41,17 @@ function verificarSelecao() {
   }
 }
 
+function formatarPreco(valor) {
+  let preco = valor
+    .querySelector(".valor")
+    .innerHTML.replace("R$", "")
+    .replace(",", ".");
+
+  preco = Number(preco) * 100;
+
+  return preco;
+}
+
 function fechandoPedido() {
   let pratoSelecionado = document.querySelector(".pratos .escolhido");
   let bebidaSelecionada = document.querySelector(".bebidas .escolhido");
@@ -53,24 +64,12 @@ function fechandoPedido() {
   let nomeSobremesaSelecionada =
     sobremesaSelecionada.querySelector(".nome-item").innerHTML;
 
-  let precoPratoSelecionado = pratoSelecionado
-    .querySelector(".valor")
-    .innerHTML.replace("R$", "")
-    .replace(",", ".");
-  let precoBebidaSelecionada = bebidaSelecionada
-    .querySelector(".valor")
-    .innerHTML.replace("R$", "")
-    .replace(",", ".");
-  let precoSobremesaSelecionada = sobremesaSelecionada
-    .querySelector(".valor")
-    .innerHTML.replace("R$", "")
-    .replace(",", ".");
+  const precoPrato = formatarPreco(pratoSelecionado);
+  const precoBebida = formatarPreco(bebidaSelecionada);
+  const precoSobremesa = formatarPreco(sobremesaSelecionada);
 
-  let precoTotal = (
-    Number(precoPratoSelecionado) +
-    Number(precoBebidaSelecionada) +
-    Number(precoSobremesaSelecionada)
-  ).toFixed(2);
+  const conversao = (precoPrato + precoBebida + precoSobremesa) / 100;
+  const precoTotal = conversao.toFixed(2);
 
   window.open(
     "https://wa.me/5562991769161?text=" +
