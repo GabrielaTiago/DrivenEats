@@ -88,17 +88,6 @@ img {
   border-width: thick solid #32b72f;
 }
 
-.item-selecionado {
-  width: 172px;
-  height: 216px;
-  border-radius: 9px;
-  background-color: #ffffff;
-  margin-right: 16px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
-  position: relative;
-  border-width: thick solid #32b72f;
-}
-
 .item-caixa-interior {
   margin: 18px 14px 14px 11px;
   height: 185px;
@@ -144,14 +133,6 @@ img {
 }
 
 footer {
-  background-color: #ffffff;
-  height: 92px;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #ffffff;
   height: 92px;
   width: 100%;

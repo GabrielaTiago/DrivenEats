@@ -53,6 +53,7 @@ function formatarPreco(valor) {
 }
 
 function fechandoPedido() {
+  let pedido = {};
   let pratoSelecionado = document.querySelector(".pratos .escolhido");
   let bebidaSelecionada = document.querySelector(".bebidas .escolhido");
   let sobremesaSelecionada = document.querySelector(".sobremesas .escolhido");
@@ -69,13 +70,31 @@ function fechandoPedido() {
   const conversao = (precoPrato + precoBebida + precoSobremesa) / 100;
   const precoTotal = conversao.toFixed(2);
 
-  const mensagemDoPedido = `Olá, gostaria de fazer o pedido:
-  - Prato: ${nomePrato}
-  - Bebida: ${nomeBebida}
-  - Sobremesa: ${nomeSobremesa}
-  Total: R$ ${precoTotal}`;
+  pedido = {
+    nomePrato,
+    nomeBebida,
+    nomeSobremesa,
+    precoPrato,
+    precoBebida,
+    precoSobremesa,
+    precoTotal,
+  };
 
-  window.open(
-    "https://wa.me/5562991769161?text=" + encodeURIComponent(mensagemDoPedido)
-  );
+  return pedido;
+}
+
+function enviaPedido() {
+  const { nomePrato, nomeBebida, nomeSobremesa, precoTotal } = fechandoPedido();
+
+  const mensagemDoPedido = `Olá, gostaria de fazer o pedido: \n
+    - Prato: ${nomePrato} \n
+    - Bebida: ${nomeBebida} \n
+    - Sobremesa: ${nomeSobremesa} \n
+    Total: R$ ${precoTotal}`;
+
+  const linkWhatsApp = `https://wa.me/5562991769161?text=${encodeURIComponent(
+    mensagemDoPedido
+  )}`;
+
+  window.open(linkWhatsApp);
 }
