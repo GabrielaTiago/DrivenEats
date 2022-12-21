@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #e5e5e5;
 }
@@ -48,9 +55,7 @@ img {
   margin-bottom: 5px;
 }
 
-.prato-principal,
-.bebida,
-.sobremesa {
+.grupo-de-itens {
   margin: auto 0 27px 19px;
   height: 258px;
   display: flex;
@@ -63,16 +68,12 @@ img {
   color: #333333;
 }
 
-.itens-rolagem-pratos,
-.itens-rolagem-bebidas,
-.itens-rolagem-sobremesas {
+.itens-rolagem {
   display: inline-flex;
   overflow-x: scroll;
 }
 
-.itens-rolagem-pratos::-webkit-scrollbar,
-.itens-rolagem-bebidas::-webkit-scrollbar,
-.itens-rolagem-sobremesas::-webkit-scrollbar {
+.itens-rolagem::-webkit-scrollbar {
   display: none;
 }
 
@@ -170,4 +171,110 @@ footer p {
   background-color: #32b72f;
   font-size: 16px;
   font-weight: 700;
+}
+
+.tela-de-confirmacao {
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+}
+
+.nenhuma-selecao {
+  display: none;
+}
+
+.dados-do-pedido {
+  height: 353px;
+  padding: 21px 24px 0px 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: #50d074;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+.titulo-confirmacao {
+  font-weight: 700;
+  text-align: center;
+}
+
+.itens-confirmacao {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nome {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.total {
+  font-weight: 700;
+}
+
+.botao-confirmacao {
+  height: 52px;
+  border-radius: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  letter-spacing: 0.018em;
+
+  cursor: pointer;
+}
+
+.confirmar {
+  width: 333px;
+
+  background-color: #ffffff;
+  color: #50d074;
+}
+
+.cancelar {
+  font-size: 20px;
+}
+
+@media (max-width: 375px) {
+  .dados-do-pedido {
+    max-width: 300px;
+    padding: 21px 14px 0px 14px;
+  }
+
+  .nome {
+    max-width: 150px;
+  }
+
+  .botao-confirmacao {
+    max-width: 250px;
+  }
 }
