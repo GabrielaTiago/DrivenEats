@@ -137,3 +137,15 @@ function enviaPedido() {
 
   window.open(linkWhatsApp);
 }
+
+function cancelaPedido() {
+  document
+    .querySelector(".tela-de-confirmacao")
+    .classList.add("nenhuma-selecao");
+
+  let itensEscolhidos = document.querySelectorAll(".escolhido");
+
+  itensEscolhidos.forEach(item => {
+    item.classList.remove("escolhido");
+  });
+}
