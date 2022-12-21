@@ -82,6 +82,46 @@ function fechandoPedido() {
   return pedido;
 }
 
+function confirmaPedido() {
+  document
+    .querySelector(".tela-de-confirmacao")
+    .classList.remove("nenhuma-selecao");
+
+  monstraItensDoPedido();
+}
+
+function monstraItensDoPedido() {
+  const {
+    nomePrato,
+    nomeBebida,
+    nomeSobremesa,
+    precoPrato,
+    precoBebida,
+    precoSobremesa,
+    precoTotal,
+  } = fechandoPedido();
+
+  const itensDoPedido = document.querySelector(".itens-confirmacao");
+  itensDoPedido.innerHTML = `
+    <li class="item">
+      <h6 class="nome">${nomePrato}</h6>
+      <h6 class="preco">${precoPrato.toFixed(2)}</h6>
+    </li>
+    <li class="item">
+    <h6 class="nome">${nomeBebida}</h6>
+    <h6 class="preco">${precoBebida.toFixed(2)}</h6>
+    </li>
+    <li class="item">
+    <h6 class="nome">${nomeSobremesa}</h6>
+    <h6 class="preco">${precoSobremesa.toFixed(2)}</h6>
+    </li>
+    <li class="item total">
+      <h5 class="total-texto">TOTAL</h5>
+      <h5 class="total-valor">R$ ${precoTotal}</h5>
+    </li>
+  `;
+}
+
 function enviaPedido() {
   const { nomePrato, nomeBebida, nomeSobremesa, precoTotal } = fechandoPedido();
 
