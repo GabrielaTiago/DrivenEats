@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #e5e5e5;
 }
@@ -51,9 +55,7 @@ img {
   margin-bottom: 5px;
 }
 
-.prato-principal,
-.bebida,
-.sobremesa {
+.grupo-de-itens {
   margin: auto 0 27px 19px;
   height: 258px;
   display: flex;
@@ -66,16 +68,12 @@ img {
   color: #333333;
 }
 
-.itens-rolagem-pratos,
-.itens-rolagem-bebidas,
-.itens-rolagem-sobremesas {
+.itens-rolagem {
   display: inline-flex;
   overflow-x: scroll;
 }
 
-.itens-rolagem-pratos::-webkit-scrollbar,
-.itens-rolagem-bebidas::-webkit-scrollbar,
-.itens-rolagem-sobremesas::-webkit-scrollbar {
+.itens-rolagem::-webkit-scrollbar {
   display: none;
 }
 
