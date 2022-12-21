@@ -47,7 +47,7 @@ function formatarPreco(valor) {
     .innerHTML.replace("R$", "")
     .replace(",", ".");
 
-  preco = Number(preco) * 100;
+  preco = (Number(preco) * 100) / 100;
 
   return preco;
 }
@@ -67,8 +67,7 @@ function fechandoPedido() {
   const precoBebida = formatarPreco(bebidaSelecionada);
   const precoSobremesa = formatarPreco(sobremesaSelecionada);
 
-  const conversao = (precoPrato + precoBebida + precoSobremesa) / 100;
-  const precoTotal = conversao.toFixed(2);
+  const precoTotal = (precoPrato + precoBebida + precoSobremesa).toFixed(2);
 
   pedido = {
     nomePrato,
