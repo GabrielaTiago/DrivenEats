@@ -143,9 +143,14 @@ function cancelaPedido() {
     .querySelector(".tela-de-confirmacao")
     .classList.add("nenhuma-selecao");
 
+  const finalizarPedido = document.querySelector("footer");
+
+  finalizarPedido.firstElementChild.classList.remove("escondido");
+  finalizarPedido.lastElementChild.classList.add("escondido");
+
   let itensEscolhidos = document.querySelectorAll(".escolhido");
 
-  itensEscolhidos.forEach(item => {
+  itensEscolhidos.forEach((item) => {
     item.classList.remove("escolhido");
   });
 }
