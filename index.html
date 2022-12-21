@@ -38,7 +38,7 @@
           <div class="item-selecionado" onclick="selecionarPrato(this)">
             <div class="item-caixa-interior">
               <img
-                src="scr/src/images/pratos/tapioca2.jpg"
+                src="src/images/pratos/tapioca2.jpg"
                 alt="foto de uma tapioca"
               />
               <div class="nome-item">Tapioca Carne Seca</div>
@@ -281,6 +281,20 @@
         </div>
       </div>
     </footer>
+    <div class="tela-de-confirmacao nenhuma-selecao">
+      <div class="dados-do-pedido">
+        <h4 class="titulo-confirmacao">Confirme seu pedido</h4>
+        <ul class="itens-confirmacao"></ul>
+        <div class="botoes">
+          <div class="botao-confirmacao confirmar" onclick="enviaPedido()">
+            Tudo certo, pode pedir!
+          </div>
+          <div class="botao-confirmacao cancelar" onclick="cancelaPedido()">
+            Cancelar
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="src/js/scripts.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
   </body>
