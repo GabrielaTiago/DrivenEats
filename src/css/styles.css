@@ -1,12 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
-
 * {
   box-sizing: border-box;
 }
 
 body {
   background-color: #e5e5e5;
+  font-family: "Roboto", sans-serif;
+  font-family: 400;
 }
 
 header {
@@ -22,7 +21,6 @@ header {
 }
 
 main {
-  font-family: "Roboto", sans-serif;
   margin-top: 123px;
   margin-bottom: 108px;
 }
@@ -30,12 +28,12 @@ main {
 img {
   width: 144px;
   height: 87px;
+
   border-radius: 4px;
   object-fit: cover;
 }
 
 .titulos {
-  font-family: "Roboto", sans-serif;
   font-size: 17px;
   color: #ffffff;
   margin-left: 21px;
@@ -71,6 +69,7 @@ img {
 .itens-rolagem {
   display: inline-flex;
   overflow-x: scroll;
+  gap: 16px;
 }
 
 .itens-rolagem::-webkit-scrollbar {
@@ -80,39 +79,46 @@ img {
 .item-selecionado {
   width: 172px;
   height: 216px;
-  border-radius: 9px;
+  padding: 18px 10px 10px 10px;
+  
   background-color: #ffffff;
-  margin-right: 16px;
+  border-radius: 9px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  
   position: relative;
-  border-width: thick solid #32b72f;
-}
-
-.item-caixa-interior {
-  margin: 18px 14px 14px 11px;
-  height: 185px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
-.nome-item {
+.nome, .descricao-item {
+  max-width: 147px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nome {
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
+  white-space: nowrap;
 }
 
 .descricao-item {
-  width: 147px;
+  height: 39px;
+
   font-weight: 300;
   font-size: 15px;
+  line-height: 18px;
   color: #a6a6a6;
-  hyphens: auto;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .valor {
   font-size: 16px;
-  font-weight: 400;
 }
 
 .escolhido {
@@ -120,12 +126,15 @@ img {
 }
 
 .escolhido ion-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+
   display: flex;
-  position: absolute;
   color: #32b72f;
-  font-size: 19px;
-  bottom: 14px;
-  right: 14px;
+  
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
 }
 
 .escondido {
@@ -133,11 +142,14 @@ img {
 }
 
 footer {
-  background-color: #ffffff;
-  height: 92px;
   width: 100%;
+  height: 92px;
+
+  background-color: #ffffff;
+  
   position: fixed;
   bottom: 0;
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,9 +162,7 @@ footer div {
 }
 
 footer p {
-  font-family: "Roboto", sans-serif;
   font-size: 20px;
-  font-weight: 400;
   color: #ffffff;
 }
 
@@ -205,7 +215,6 @@ footer p {
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
   border-radius: 9px;
 
-  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   color: #ffffff;
@@ -228,11 +237,10 @@ footer p {
   justify-content: space-between;
 }
 
-.nome {
+.item .nome {
   max-width: 200px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-weight: 400;
+  font-size: 20px;
 }
 
 .total {
@@ -265,13 +273,13 @@ footer p {
 }
 
 @media (max-width: 375px) {
+  footer div {
+    max-width: 220px;
+  }
+
   .dados-do-pedido {
     max-width: 300px;
     padding: 21px 14px 0px 14px;
-  }
-
-  .nome {
-    max-width: 150px;
   }
 
   .botao-confirmacao {

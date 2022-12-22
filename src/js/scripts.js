@@ -58,10 +58,10 @@ function fechandoPedido() {
   let bebidaSelecionada = document.querySelector(".bebidas .escolhido");
   let sobremesaSelecionada = document.querySelector(".sobremesas .escolhido");
 
-  const nomePrato = pratoSelecionado.querySelector(".nome-item").innerHTML;
-  const nomeBebida = bebidaSelecionada.querySelector(".nome-item").innerHTML;
+  const nomePrato = pratoSelecionado.querySelector(".nome").innerHTML;
+  const nomeBebida = bebidaSelecionada.querySelector(".nome").innerHTML;
   const nomeSobremesa =
-    sobremesaSelecionada.querySelector(".nome-item").innerHTML;
+    sobremesaSelecionada.querySelector(".nome").innerHTML;
 
   const precoPrato = formatarPreco(pratoSelecionado);
   const precoBebida = formatarPreco(bebidaSelecionada);
