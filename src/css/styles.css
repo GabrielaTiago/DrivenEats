@@ -96,18 +96,30 @@ img {
   justify-content: space-evenly;
 }
 
-.nome-item {
+.nome, .descricao-item {
+  max-width: 147px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nome {
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
+  white-space: nowrap;
 }
 
 .descricao-item {
-  width: 147px;
+  height: 39px;
+
   font-weight: 300;
   font-size: 15px;
+  line-height: 18px;
   color: #a6a6a6;
-  hyphens: auto;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .valor {
@@ -228,13 +240,6 @@ footer p {
   justify-content: space-between;
 }
 
-.nome {
-  max-width: 200px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 .total {
   font-weight: 700;
 }
@@ -268,10 +273,6 @@ footer p {
   .dados-do-pedido {
     max-width: 300px;
     padding: 21px 14px 0px 14px;
-  }
-
-  .nome {
-    max-width: 150px;
   }
 
   .botao-confirmacao {
