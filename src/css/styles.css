@@ -4,6 +4,8 @@
 
 body {
   background-color: #e5e5e5;
+  font-family: "Roboto", sans-serif;
+  font-family: 400;
 }
 
 header {
@@ -19,7 +21,6 @@ header {
 }
 
 main {
-  font-family: "Roboto", sans-serif;
   margin-top: 123px;
   margin-bottom: 108px;
 }
@@ -33,7 +34,6 @@ img {
 }
 
 .titulos {
-  font-family: "Roboto", sans-serif;
   font-size: 17px;
   color: #ffffff;
   margin-left: 21px;
@@ -119,7 +119,6 @@ img {
 
 .valor {
   font-size: 16px;
-  font-weight: 400;
 }
 
 .escolhido {
@@ -163,9 +162,7 @@ footer div {
 }
 
 footer p {
-  font-family: "Roboto", sans-serif;
   font-size: 20px;
-  font-weight: 400;
   color: #ffffff;
 }
 
@@ -218,7 +215,6 @@ footer p {
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
   border-radius: 9px;
 
-  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   color: #ffffff;
@@ -239,6 +235,12 @@ footer p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.item .nome {
+  max-width: 200px;
+  font-weight: 400;
+  font-size: 20px;
 }
 
 .total {
@@ -274,7 +276,7 @@ footer p {
   footer div {
     max-width: 220px;
   }
-  
+
   .dados-do-pedido {
     max-width: 300px;
     padding: 21px 14px 0px 14px;
