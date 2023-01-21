@@ -27,27 +27,17 @@ O site permite de forma fácil a escolha do seu combo, enviando em seguida o ped
 
 ### :computer: Telas
 
-##### Desktop:
-
-<img src="src/images/screen/large.png" alt="viewing the app on a large screen">
-
-##### Tablet:
-
-<img src="src/images/screen/medium.jpg" alt="viewing the app on a medium screen">
-   
-##### Mobile:
-<div>
-    <img src="src/images/screen/mobile-1.jpg" alt="viewing the app on a small screen">
-    <img src="src/images/screen/mobile-2.jpg" alt="viewing the app on a small screen">
-</div>
+<p align="center">
+    <h5>Desktop:</h5>
+    <img src="src/images/telas/large.png" alt="viewing the app on a large screen">
+    <h5>Tablet:</h5>
+    <img src="src/images/telas/medium.png" alt="viewing the app on a medium screen">
+    <h5>Mobile:</h5>
+    <img src="src/images/telas/mobile-home.png" alt="viewing the app on a small screen">
+    <img src="src/images/telas/mobile-2.png" alt="viewing the app on a small screen">
+</p>
 
 $~$
-
----
-
-### 🎮 Usando
-
-<img src="src/images/screen/large-screen.gif" alt="viewing the app on a small screen">
 
 ---
 
@@ -68,7 +58,7 @@ $~$
 
 - [Badges para Github](https://github.com/alexandresanlim/Badges4-README.md-Profile#-database-)
 - [README Inspiração de README](https://gist.github.com/luanalessa/7f98467a5ed62d00dcbde67d4556a1e4#file-readme-md)
-- [Driven Education](https://www.driven.com.br)
+- [Diven Education](https://www.driven.com.br)
 
 ---
 
